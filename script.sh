@@ -2,7 +2,7 @@
 #####   NOME:              StartMask
 #####   VERSÃO:            1.0
 #####   DESCRIÇÃO:         Script para realizar o Start no Mascaramento
-#####   DATA DA CRIAÇÃO:           24/04/2024
+#####   DATA DA CRIAÇÃO:   24/04/2024
 #####   ESCRITO POR:       Ricardo Amaral / Felipe Andrade
 #####   E-MAIL:            ricardo.amaral@tgvtec.com.br / felipe.andrade@tgvtec.com.br
 
@@ -12,7 +12,7 @@ JOB_NAME='MSK_ADVENTURE_SALES'
 USR=Admin
 PWD='Admin-12'
 LOG=./StartMask.log
-#EVENT=
+
 login() {
 	TOKEN=$(curl -X 'POST' 'http://'$IP_ENGINE_MASK'/masking/api/v5.1.31/login' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"username": "'$USR'",  "password": "'$PWD'"}' | cut -d'"' -f4)
 }
@@ -30,7 +30,6 @@ execmsk() {
 }
 
 mjob() {
-	#STATUSJOB=$(curl -X 'GET' 'http://'$IP_ENGINE_MASK'/masking/api/v5.1.31/monitor-task/'$EXECUTIONID'?monitorable_task=EXECUTIONS' -H 'accept: application/json' -H 'Authorization:'$TOKEN |jq '.progression[] | select(.event == "'$EVENT'")'| jq .status)
 	STATUSJOB=$(curl -X 'GET' 'http://'$IP_ENGINE_MASK'/masking/api/v5.1.31/monitor-task/'$EXECUTIONID'?monitorable_task=EXECUTIONS' -H 'accept: application/json' -H 'Authorization:'$TOKEN)
 	while true; do
 		START=$(echo $STATUSJOB | jq '.progression[] | select(.event == "Initializing")' | jq .status)
@@ -50,9 +49,6 @@ mjob() {
 	done
 
 }
-jq --version
-[ echo $? != 0] && echo 1
-#validar ping na engine
 echo 'Iniciando Login - ' date +'%d/%m/%y %H:%M:%S' >>$LOG
 login
 if [ $(echo $TOKEN | sed 's/ //g') == 'Invalidusernameorpassword' ]; then
