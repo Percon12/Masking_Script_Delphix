@@ -19,7 +19,7 @@ To execute the script you must configure the variables according to your environ
 ```
 IP_ENGINE_MASK='192.168.0.1'
 NM_ENV='ENVNAME'
-JOB_NAME='MSK_JOB'
+JOB_NAME=('MSK_JOB1' 'MSK_JOB2') 
 USR=Admin
 PWD='Admin-12'
 ```
