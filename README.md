@@ -28,5 +28,5 @@ PWD='Admin-12'
 To run the script just run the following command
 
 ```shell
-bash -x./script.sh
+bash -x ./script.sh
 ```
