@@ -18,6 +18,11 @@ Or
 ```
 sudo yum install jq
 ```
+Or
+
+```
+sudo zypp install jq
+```
 
 ## Configuring
 To execute the script you must configure the variables according to your environment.
