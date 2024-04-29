@@ -2,7 +2,7 @@
 #####   NOME:              StartMask
 #####   VERSÃO:            1.1
 #####   DESCRIÇÃO:         Script para realizar o Start no Mascaramento
-#####   DATA DA CRIAÇÃO:           24/04/2024
+#####   DATA DA CRIAÇÃO:   24/04/2024
 #####   ESCRITO POR:       Ricardo Amaral / Felipe Andrade
 #####   E-MAIL:            ricardo.amaral@tgvtec.com.br / felipe.andrade@tgvtec.com.br
 
