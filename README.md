@@ -10,18 +10,18 @@ Link for use the original DXMC: https://github.com/delphix/dxm-toolkit
 To run the script, you need a jq library installed.
 
 ```
-sudo apt-get install jq
+apt-get install jq
 ```
 
 Or
 
 ```
-sudo yum install jq
+yum install jq
 ```
 Or
 
 ```
-sudo zypper install jq
+zypper install jq
 ```
 
 ## Configuring
