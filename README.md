@@ -13,6 +13,12 @@ To run the script, you need a jq library installed.
 sudo apt-get install jq
 ```
 
+Or
+
+```
+sudo yum install jq
+```
+
 ## Configuring
 To execute the script you must configure the variables according to your environment.
 
