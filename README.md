@@ -1,4 +1,4 @@
-# DXMC-tabajara
+# Masking_Script_Delphix
 
 This Script is used to perform automated masking via Hooks by Delphix on systems that are not supported by DXMC.
 
