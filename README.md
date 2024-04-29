@@ -21,7 +21,7 @@ sudo yum install jq
 Or
 
 ```
-sudo zypp install jq
+sudo zypper install jq
 ```
 
 ## Configuring
