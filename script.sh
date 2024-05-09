@@ -84,7 +84,7 @@ start() {
 }
 jq --version
 if [ $(echo $?) -eq 0 ]; then
-	ping $IP_ENGINE_MASK -n 1
+	ping $IP_ENGINE_MASK -c 1
 	if [ $(echo $?) != 0 ]; then
 		echo 'Favor Verificar o Hostname/IP da Engine' $(date +'%d/%m/%Y %H:%M:%S') >>$LOG
 		exit 1
